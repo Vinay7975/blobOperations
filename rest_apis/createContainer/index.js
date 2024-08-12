@@ -2,8 +2,8 @@ const { BlobServiceClient, StorageSharedKeyCredential } = require("@azure/storag
 
 
 module.export = async function (context, req) {
-    const accountName = "upload1234";
-    const accountKey = "CSiOFOT/iQJpkSBj7AbFRz4E1p4sw/8xX/ozlr29BTxXdV6hT87tSoHy6R72B63Q5FyieZwZqtn5+ASt8XyrFA==";
+    const accountName = "";
+    const accountKey = "";
     const containerName = req.query.containerName;
     context.log('Container name: ', containerName);
 
@@ -29,8 +29,8 @@ function createBlobServiceClient(account, accountKey) {
 
 // Function to create a container
 async function createContainer() {
-    const account = "upload1234";
-    const accountKey = "CSiOFOT/iQJpkSBj7AbFRz4E1p4sw/8xX/ozlr29BTxXdV6hT87tSoHy6R72B63Q5FyieZwZqtn5+ASt8XyrFA==";
+    const account = "";
+    const accountKey = "";
     const blobServiceClient = createBlobServiceClient(account, accountKey);
 
     const containerName = `newcontainer${new Date().getTime()}`;

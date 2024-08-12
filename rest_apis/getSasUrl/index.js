@@ -2,7 +2,7 @@ const { BlobServiceClient, generateBlobSASQueryParameters, BlobSASPermissions, S
 
 const containerName = "esignage";
 const accountName = "upload1234";
-const accountKey = "CSiOFOT/iQJpkSBj7AbFRz4E1p4sw/8xX/ozlr29BTxXdV6hT87tSoHy6R72B63Q5FyieZwZqtn5+ASt8XyrFA==";
+const accountKey = "";
 
 async function generateSASToken(context, blobName) {
     context.log(`generateSASToken called to generate sas token for blobname ::: ${blobName}`);
