@@ -3,7 +3,7 @@ const { BlobServiceClient, StorageSharedKeyCredential } = require("@azure/storag
 
 module.export = async function (context, req) {
     const accountName = "";
-    const accountKey = "";
+    // const accountKey = "";
     const containerName = req.query.containerName;
     context.log('Container name: ', containerName);
 
@@ -30,7 +30,7 @@ function createBlobServiceClient(account, accountKey) {
 // Function to create a container
 async function createContainer() {
     const account = "";
-    const accountKey = "";
+    // const accountKey = "";
     const blobServiceClient = createBlobServiceClient(account, accountKey);
 
     const containerName = `newcontainer${new Date().getTime()}`;

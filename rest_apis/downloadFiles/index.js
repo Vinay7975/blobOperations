@@ -5,7 +5,7 @@ module.exports = async function (context, req) {
 
     // Blob storage account credentials
     const accountName = 'upload1234';
-    const accountKey = '';
+    // const accountKey = '';
     
     // Blob container and blob name
     const containerName = 'esignage';

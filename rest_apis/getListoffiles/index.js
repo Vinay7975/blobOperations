@@ -2,7 +2,7 @@ const { BlobServiceClient } = require('@azure/storage-blob');
 
 module.exports = async function (context, req) {
     const accountName = 'upload1234';
-    const accountKey = '';
+    // const accountKey = '';
     const containerName = 'esignage';
 
     const listBlobsInContainer = async () => {
