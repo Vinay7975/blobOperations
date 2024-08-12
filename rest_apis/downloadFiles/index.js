@@ -3,9 +3,7 @@ const { BlobServiceClient } = require("@azure/storage-blob");
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
-    // Blob storage account credentials
-    const accountName = 'upload1234';
-    // const accountKey = '';
+    // Blob storage account credential
     
     // Blob container and blob name
     const containerName = 'esignage';

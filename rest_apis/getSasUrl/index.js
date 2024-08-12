@@ -1,8 +1,5 @@
 const { BlobServiceClient, generateBlobSASQueryParameters, BlobSASPermissions, StorageSharedKeyCredential } = require("@azure/storage-blob");
 
-const containerName = "esignage";
-const accountName = "upload1234";
-// const accountKey = "";
 
 async function generateSASToken(context, blobName) {
     context.log(`generateSASToken called to generate sas token for blobname ::: ${blobName}`);

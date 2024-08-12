@@ -1,9 +1,7 @@
 const { BlobServiceClient } = require('@azure/storage-blob');
 
 module.exports = async function (context, req) {
-    const accountName = 'upload1234';
-    // const accountKey = '';
-    const containerName = 'esignage';
+
 
     const listBlobsInContainer = async () => {
         const blobServiceClient = BlobServiceClient.fromConnectionString(`DefaultEndpointsProtocol=https;AccountName=${accountName};AccountKey=${accountKey};EndpointSuffix=core.windows.net`);
