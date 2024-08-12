@@ -1,0 +1,91 @@
+div {
+  text-align: center;
+
+  h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  .drop-zone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+
+    p {
+      margin: 0;
+    }
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  #file {
+    display: none;
+  }
+
+/* Add styles for the file details table */
+.file-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #464e00;
+    color: #fff;
+    text-align: center;
+  }
+
+  .file-details-header {
+    background-color: #e9fa00;
+    color: #000000;
+    text-align: center;
+  }
+}
+
+  button.upload-button {
+    padding: 10px 110px;
+    background-color: #ff8800;
+    font-size: 14px;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+  }
+
+.select-file-button {
+  padding: 10px 100px; 
+  font-size: 14px;   
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.drag-drop-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+
+  p {
+    margin: 35px;
+    font-size: 25px; 
+  }
+}
+
+button.list-button{
+  padding: 10px 100px;
+  font-size: 15px;
+  color: blue;
+  cursor: pointer;
+  border: none;
+}
+
+}

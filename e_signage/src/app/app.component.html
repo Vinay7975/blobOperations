@@ -1,0 +1,70 @@
+<div>
+  <h1>File Uploader</h1>
+  <input type="file" id="file" style="display: none" (change)="onFileSelected($event)">
+
+  <div id="drag-drop-area" class="drag-drop-area" (dragover)="onDragOver($event)" (drop)="onFileDropped($event)"
+    (dragleave)="onDragLeave($event)">
+    <p>Drag and drop a file here or</p>
+    <button type="button" (click)="openFileInput()" class="select-file-button">Select File</button>
+  </div>
+
+  <table *ngIf="selectedFile" class="file-details-table">
+    <tr>
+      <th colspan="2" class="file-details-header">File Details</th>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{ fileName }}</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>{{ fileSize }} bytes</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>{{ fileType }}</td>
+    </tr>
+  </table>
+  <br>
+
+  <div *ngIf="fileUploadProgress !== '0.00' && fileUploadProgress !== '100.00'">
+    <strong>Progress:</strong>
+    <span id="fileUploadProgress">{{ fileUploadProgress }}%</span>
+    <progress value="{{ fileUploadProgress }}" max="100"></progress>
+  </div>
+  <br>
+
+  <button type="button" (click)="onUpload()" class="upload-button">Upload</button>
+
+</div>
+
+<div>
+  <br>
+  <table *ngIf="files" class="file-details-table">
+    <thead>
+      <tr>
+        <th>File Name</th>
+        <th>File Size (KB)</th>
+        <th>File Type</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let file of files">
+        <td>{{ file.name }}</td>
+        <td>{{ (file.properties.contentLength / 1024).toFixed(2) }} KB</td>
+        <td>{{ file.properties.contentType }}</td>
+        <td>
+          <button type="button" (click)="onDeleteFile(file)" class="delete-file-button">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+          <span style="margin-left: 40px;"></span> 
+          <button type="button" (click)="onDownloadFile(file)" class="download-file-button">
+            <i class="fas fa-download"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
